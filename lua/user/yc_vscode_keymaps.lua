@@ -1,6 +1,9 @@
 -- https://medium.com/@nikmas_dev/vscode-neovim-setup-keyboard-centric-powerful-reliable-clean-and-aesthetic-development-582d34297985
 local keymap = vim.keymap.set
-local opts = { noremap = true, silent = true }
+local opts = {
+    noremap = true,
+    silent = true
+}
 
 -- remap leader key
 keymap("n", "<Space>", "", opts)
@@ -33,3 +36,6 @@ keymap("n", "<Esc>", "<Esc>:noh<CR>", opts)
 keymap({"n", "v"}, "<leader>w", ':w<CR>', opts)
 keymap({"n", "v"}, "<leader>q", ':q<CR>', opts)
 keymap("n", "<Leader><Leader>", ":source $MYVIMRC<cr>")
+
+-- Mode switching
+keymap("i", "jk", "<ESC>", opts) -- insert to normal mode
