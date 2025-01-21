@@ -39,3 +39,4 @@ keymap("n", "<Leader><Leader>", ":source $MYVIMRC<cr>")
 
 -- Mode switching
 keymap("i", "jk", "<ESC>", opts) -- insert to normal mode
+keymap("i", "jj", "<ESC>", opts) -- insert to normal mode
